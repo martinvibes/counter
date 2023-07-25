@@ -8,11 +8,20 @@ function increment() {
   countEl.innerText = count
 }
 
+function sub() {
+  if (count <= 0) {
+    return 0
+  }
+  count -= 1
+  countEl.textContent = count
+}
+
 function save() {
   let saved = count  + " - "
-  saveEl.textContent += saved
   let normal = 0
   countEl.textContent = normal
   count = 0
+  localStorage.setItem("count", saveEl.textContent += saved)
+  console.log( localStorage.getItem("count") )
 }
 
